@@ -1,0 +1,18 @@
+﻿@page "/Profil"
+@using datingedit.Models
+
+@inject NavigationManager NavigationManager
+
+<h3>Profilside</h3>
+
+<div class="mt-4">
+    <p>Velkommen, @userProfile.Navn</p>
+    <p>Postnummer: @userProfile.Postnummer</p>
+    <p>Fødselsdato: @userProfile.Fødselsdag.ToShortDateString()</p>
+    <p>Køn: @userProfile.Køn</p>
+</div>
+
+@code{
+
+private UserProfile userProfile { get; set; }
+}
