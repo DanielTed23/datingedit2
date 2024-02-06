@@ -15,4 +15,14 @@
 @code{
 
 private UserProfile userProfile { get; set; }
+    protected override void OnInitialized()
+    {
+        userProfile = new UserProfile
+            {
+                Navn = "",
+                Adgangskode = "",
+                Fødselsdag = DateTime.Now,
+                Køn = "Andet"
+            };
+    }
 }
